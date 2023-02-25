@@ -31,11 +31,13 @@ is_male = {
 }
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
+
 for name in names:
-    if is_male[name] == False:
-        print(f'{name}: Женский')
+    # gender = 'male' if is_male[name] else 'female'
+    if is_male[name]:
+      print(f'{name}: Мужской')
     else:
-        print(f'{name}: Мужской') 
+      print(f'{name}: Женский')
 
 
 # Задание 4
@@ -51,12 +53,9 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
 ]
 
-num_group = 0
-
-for group in groups:
+for num, group in enumerate(groups, start=1):
   group_len = len(group)
-  num_group += 1
-  print(f'Группа номер {num_group}: {group_len} ученика')
+  print(f'Группа номер {num}: {group_len} ученика')
 
 
 # Задание 5
@@ -71,12 +70,9 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
 
-num_group = 0
-
-for group in groups:
-  num_group += 1
-  print("Группа номер {num_group}: {group}".format(
-    num_group=num_group, 
+for num, group in enumerate(groups, start=1):
+  print("Группа номер {num}: {group}".format(
+    num=num, 
     group=', '.join(group),
   ))
     
