@@ -6,8 +6,8 @@ print(word[-1])
 # Вывести количество букв "а" в слове
 word = 'Архангельск'
 count = 0
-for i in word:
-  if i == 'а' or i == 'А':
+for i in word.lower():
+  if i == 'а':
     count += 1
 print(f'Букв А в слове Архангельск: {count}')
 
@@ -15,8 +15,8 @@ print(f'Букв А в слове Архангельск: {count}')
 # Вывести количество гласных букв в слове
 word = 'Архангельск'
 count = 0
-glasnie = set('ЁУЕЫАОЭЯИЮуеыаоэяиюё')
-for letter in word:
+glasnie = set('уеыаоэяиюё')
+for letter in word.lower():
   if letter in glasnie:
     count += 1
 print(f"Количество глассных: {count}")
