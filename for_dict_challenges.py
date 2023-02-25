@@ -4,6 +4,7 @@
 # Вася: 1
 # Маша: 2
 # Петя: 2
+from collections import Counter
 
 students = [
     {'first_name': 'Вася'},
@@ -12,7 +13,9 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-# ???
+repeat = [i['first_name'] for i in students]
+for name, student in Counter(repeat).items():
+    print(f'{name}: {student}')
 
 
 # Задание 2
